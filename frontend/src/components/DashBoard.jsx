@@ -1,4 +1,5 @@
-"use client";
+/* eslint-disable no-unused-vars */
+
 
 import { useState } from "react";
 import {
@@ -19,14 +20,14 @@ import {
   Settings,
   Users,
 } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/componenets/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/componenets/ui/card";
+} from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -46,21 +47,21 @@ const performanceData = [
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-white">
       {/* Main Content */}
       <main className="flex-1">
         {/* Header */}
-        <header className="bg-white shadow-sm">
+        <header className="bg-blue-500 shadow-sm">
           <div className="flex items-center justify-between px-8 py-4">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-primary mr-8">
+              <h1 className="text-2xl font-bold text-white mr-8">
                 StudyTrack
               </h1>
-              <h2 className="text-2xl font-semibold">Dashboard</h2>
+              <h2 className="text-2xl font-semibold text-white">Dashboard</h2>
             </div>
             <div className="flex items-center space-x-4">
               <Button variant="ghost" size="icon">
-                <Bell className="h-5 w-5" />
+                <Bell className="h-5 w-5 text-white" />
               </Button>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -83,7 +84,7 @@ export default function Dashboard() {
                       <p className="text-sm font-medium leading-none">
                         John Doe
                       </p>
-                      <p className="text-xs leading-none text-muted-foreground">
+                      <p className="text-xs leading-none text-blue-200">
                         john@example.com
                       </p>
                     </div>
@@ -100,62 +101,60 @@ export default function Dashboard() {
 
         {/* Dashboard Content */}
         <div className="p-8">
-          
-
           {/* Stats Cards */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
-            <Card>
+            <Card className="bg-blue-100">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
+                <CardTitle className="text-sm font-medium text-blue-900">
                   Total Students
                 </CardTitle>
-                <Users className="h-4 w-4 text-muted-foreground" />
+                <Users className="h-4 w-4 text-blue-700" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">1,234</div>
-                <p className="text-xs text-muted-foreground">
+                <div className="text-2xl font-bold text-blue-900">1,234</div>
+                <p className="text-xs text-blue-700">
                   +10% from last month
                 </p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-blue-100">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
+                <CardTitle className="text-sm font-medium text-blue-900">
                   Active Courses
                 </CardTitle>
-                <GraduationCap className="h-4 w-4 text-muted-foreground" />
+                <GraduationCap className="h-4 w-4 text-blue-700" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">56</div>
-                <p className="text-xs text-muted-foreground">
+                <div className="text-2xl font-bold text-blue-900">56</div>
+                <p className="text-xs text-blue-700">
                   +2 new this week
                 </p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-blue-100">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
+                <CardTitle className="text-sm font-medium text-blue-900">
                   Average Attendance
                 </CardTitle>
-                <Users className="h-4 w-4 text-muted-foreground" />
+                <Users className="h-4 w-4 text-blue-700" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">92%</div>
-                <p className="text-xs text-muted-foreground">
+                <div className="text-2xl font-bold text-blue-900">92%</div>
+                <p className="text-xs text-blue-700">
                   +5% from last week
                 </p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-blue-100">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
+                <CardTitle className="text-sm font-medium text-blue-900">
                   Upcoming Events
                 </CardTitle>
-                <Bell className="h-4 w-4 text-muted-foreground" />
+                <Bell className="h-4 w-4 text-blue-700" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">3</div>
-                <p className="text-xs text-muted-foreground">
+                <div className="text-2xl font-bold text-blue-900">3</div>
+                <p className="text-xs text-blue-700">
                   Next event in 2 days
                 </p>
               </CardContent>
@@ -163,9 +162,9 @@ export default function Dashboard() {
           </div>
 
           {/* Performance Chart */}
-          <Card className="mb-8">
+          <Card className="bg-blue-100 mb-8">
             <CardHeader>
-              <CardTitle>Student Performance</CardTitle>
+              <CardTitle className="text-blue-900">Student Performance</CardTitle>
             </CardHeader>
             <CardContent>
               <ResponsiveContainer width="100%" height={300}>
@@ -182,9 +181,9 @@ export default function Dashboard() {
           </Card>
 
           {/* Recent Activity */}
-          <Card>
+          <Card className="bg-blue-100">
             <CardHeader>
-              <CardTitle>Recent Activity</CardTitle>
+              <CardTitle className="text-blue-900">Recent Activity</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-4">
@@ -197,10 +196,10 @@ export default function Dashboard() {
                     <AvatarFallback>SC</AvatarFallback>
                   </Avatar>
                   <div className="ml-4">
-                    <p className="text-sm font-medium">
+                    <p className="text-sm font-medium text-blue-900">
                       Sarah Connor submitted an assignment
                     </p>
-                    <p className="text-sm text-muted-foreground">2 hours ago</p>
+                    <p className="text-sm text-blue-700">2 hours ago</p>
                   </div>
                 </li>
                 <li className="flex items-center">
@@ -212,10 +211,10 @@ export default function Dashboard() {
                     <AvatarFallback>JS</AvatarFallback>
                   </Avatar>
                   <div className="ml-4">
-                    <p className="text-sm font-medium">
+                    <p className="text-sm font-medium text-blue-900">
                       John Smith enrolled in a new course
                     </p>
-                    <p className="text-sm text-muted-foreground">5 hours ago</p>
+                    <p className="text-sm text-blue-700">5 hours ago</p>
                   </div>
                 </li>
                 <li className="flex items-center">
@@ -227,10 +226,10 @@ export default function Dashboard() {
                     <AvatarFallback>EJ</AvatarFallback>
                   </Avatar>
                   <div className="ml-4">
-                    <p className="text-sm font-medium">
+                    <p className="text-sm font-medium text-blue-900">
                       Emily Johnson updated her profile
                     </p>
-                    <p className="text-sm text-muted-foreground">1 day ago</p>
+                    <p className="text-sm text-blue-700">1 day ago</p>
                   </div>
                 </li>
               </ul>

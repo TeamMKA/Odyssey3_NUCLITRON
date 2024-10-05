@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./componenets/Home";
-import DashBoard from "./componenets/DashBoard";
-import Program from "./componenets/Program";
-import Notice from "./componenets/Notice";
-import StudDashboard from "./componenets/StudDashboard";
-import Profile from "./componenets/Profile";
+import Home from "./components/Home";
+import DashBoard from "./components/DashBoard";
+import Program from "./components/Program";
+import Notice from "./components/Notice";
+import StudDashboard from "./components/StudDashboard";
+import Profile from "./components/Profile";
 
 const App = () => {
   return (
